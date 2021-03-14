@@ -1,0 +1,112 @@
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+.container{
+    width: 600px;
+    height: 700px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+header{
+    border: 3px solid var(--HeaderOutline);
+    display: flex;
+    border-radius: 20px;
+    justify-content: space-between;
+    padding: 20px;
+    margin: 50px 0;
+}
+header h1{
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 0.8;
+    text-transform: uppercase;
+}
+.pontuacao h4{
+    color: var(--DarkText);
+    margin: 0;
+    letter-spacing: 5px;
+}
+.pontuacao p{
+    color: var(--DarkText);
+    font-size: 3.5rem;
+    margin: 0;
+}
+.pontuacao{
+    text-transform: uppercase;
+    background-color: white;
+    padding: 20px 40px;
+    text-align: center;
+    border-radius: 10px;
+    font-weight: 700;
+}
+.btncirculo{
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+    border: none;
+    cursor: pointer;
+    margin: 25px;
+    box-shadow: inset 0 -5px rgba(0,0, 0, 0.15);
+}
+.btncirculo span{
+    background: white;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 120px;
+    width: 120px;
+    box-shadow: inset 0 5px rgba(0,0, 0, 0.15);
+}
+.papel{
+    background: linear-gradient(to bottom, var(--PaperGradient));
+}
+.tesoura{
+    background: linear-gradient(to bottom, var(--ScissorsGradient));
+}
+.pedra{
+    background: linear-gradient(to bottom, var(--RockGradient));
+}
+.btnregras{
+    border: 2px solid white;
+    border-radius: 10px;
+    background-color: transparent;
+    color: white;
+    font-family: inherit;
+    font-size: 20px;
+    padding: 18px 25px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+}
+main{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    height: 400px;
+    width: 400px;
+    margin: 0 auto;
+    position: relative;
+}
+main::before{
+    background-image: url('/images/bg-triangle.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    content: '';
+    position: absolute;
+    top: 25%;
+    left: 10%;
+    height: 70%;
+    width: 70%;
+    z-index: -1;
+}
