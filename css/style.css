@@ -4,10 +4,10 @@
 }
 .attribution a { 
     color: hsl(228, 45%, 44%); 
+    text-decoration: none;
 }
 .container{
     width: 600px;
-    height: 700px;
     max-width: 100%;
     margin: 0 auto;
 }
@@ -16,6 +16,7 @@ header{
     display: flex;
     border-radius: 20px;
     justify-content: space-between;
+    align-items: center;
     padding: 20px;
     margin: 50px 0;
 }
@@ -26,6 +27,10 @@ header h1{
     font-size: 3rem;
     font-weight: 700;
     line-height: 0.8;
+    text-transform: uppercase;
+}
+h2{
+    letter-spacing: 2px;
     text-transform: uppercase;
 }
 .pontuacao h4{
@@ -65,13 +70,13 @@ header h1{
     width: 120px;
     box-shadow: inset 0 5px rgba(0,0, 0, 0.15);
 }
-.papel{
+.paper{
     background: linear-gradient(to bottom, var(--PaperGradient));
 }
-.tesoura{
+.scissors{
     background: linear-gradient(to bottom, var(--ScissorsGradient));
 }
-.pedra{
+.rock{
     background: linear-gradient(to bottom, var(--RockGradient));
 }
 .btnregras{
@@ -87,6 +92,7 @@ header h1{
     position: fixed;
     bottom: 30px;
     right: 30px;
+    z-index: 999;
 }
 main{
     display: flex;
@@ -109,4 +115,81 @@ main::before{
     height: 70%;
     width: 70%;
     z-index: -1;
+}
+.btnjogar{
+    border: 2px solid white;
+    border-radius: 10px;
+    background-color: white;
+    color: var(--DarkText);
+    font-family: inherit;
+    font-size: 20px;
+    padding: 18px 25px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    bottom: 30px;
+    right: 30px;
+}
+.selecao{
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    width: 800px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+.selecao .btncirculo{
+    margin: 50px;
+    transform: scale(1.2);
+}
+.texto{
+    flex-direction: column;
+    margin: 0 0 20px;
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 0.8;
+    text-transform: uppercase;
+}
+.button:focus{
+    outline: none;
+}
+.btncirculo:active{
+    transform: scale(0.9);
+}
+.divregras{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 20%;
+    left: 20%;
+    margin: 0 auto;
+    width: 50%;
+    z-index: 100;
+    border-radius: 5%;
+
+}
+.divregras .imagem-regras{
+    background-color: white;
+    display: grid;
+    border-radius: 5%;
+    padding: 20px;
+}
+.divregras button{
+    margin-left: 250px;
+    border: none;
+    background-color: transparent;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    transform: scale(1.5);
+    cursor: pointer;
+    font-family: inherit;
+    text-transform: uppercase;
+}
+@media(max-width:700px){
+    .selecao{
+        flex-direction: column;
+    }
 }
