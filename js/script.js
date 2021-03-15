@@ -72,6 +72,6 @@ function atualizarselecao(elementoselecionado, choice){
     
     const img = elementoselecionado.querySelector('img');
     elementoselecionado.classList.add(choice);
-    img.src =  `/images/icon-${choice}.svg`;
+    img.src =  `/rock-paper-scissors-master/images/icon-${choice}.svg`;
     img.alt = choice;
 }
